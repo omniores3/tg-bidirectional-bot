@@ -1,0 +1,23 @@
+{
+  "name": "telegram-bot-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "presync": "node ../scripts/sync-config.mjs",
+    "sync": "node ../scripts/sync-config.mjs",
+    "prebuild": "node ../scripts/sync-config.mjs",
+    "build": "tsc --noEmit",
+    "pretest": "node ../scripts/sync-config.mjs",
+    "test": "vitest run",
+    "predeploy": "node ../scripts/sync-config.mjs && npm run build",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261116.1",
+    "typescript": "^5",
+    "vitest": "^3",
+    "wrangler": "^4"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare 中的 Worker 名称，也是默认 workers.dev 子域的一部分。
+  "name": "telegram-bidirectional-bot",
+  // TypeScript HTTP 入口；部署命令会先执行配置同步和 tsc 检查。
+  "main": "src/index.ts",
+  // Workers 运行时兼容日期，升级前应重新执行测试与构建。
+  "compatibility_date": "2026-11-16",
+  // 启用默认 workers.dev 域名；绑定自定义域名时仍可保留此项。
+  "workers_dev": true,
+  // 开启平台可观测性；业务代码本身只返回精简错误，不记录消息正文。
+  "observability": {
+    "enabled": true
+  }
+}

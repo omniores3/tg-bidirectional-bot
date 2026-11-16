@@ -1,0 +1,23 @@
+# Local secrets and deployment configuration
+config.js
+GoogleScripts/.clasp.json
+
+# Generated from the root config.js
+CloudflareWorkers/src/config.generated.ts
+GoogleScripts/config.generated.js
+
+# Dependencies and build output
+node_modules/
+**/node_modules/
+.wrangler/
+**/.wrangler/
+dist/
+**/dist/
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,20 @@
+{
+  "name": "telegram-bot-apps-script",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "presync": "node ../scripts/sync-config.mjs",
+    "sync": "node ../scripts/sync-config.mjs",
+    "pretest": "node ../scripts/sync-config.mjs",
+    "test": "node --test test/bot.test.js test/features.test.js",
+    "prepush": "node ../scripts/sync-config.mjs",
+    "push": "clasp push",
+    "pull": "clasp pull"
+  },
+  "devDependencies": {
+    "@google/clasp": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

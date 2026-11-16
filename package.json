@@ -1,0 +1,18 @@
+{
+  "name": "telegram-bidirectional-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serverless Telegram bidirectional bot with independent Cloudflare Workers or Google Apps Script deployments",
+  "scripts": {
+    "sync:config": "node scripts/sync-config.mjs",
+    "test:worker": "npm test --prefix CloudflareWorkers",
+    "test:gas": "npm test --prefix GoogleScripts",
+    "build:worker": "npm run build --prefix CloudflareWorkers",
+    "deploy:worker": "npm run deploy --prefix CloudflareWorkers",
+    "push:gas": "npm run push --prefix GoogleScripts",
+    "webhook:set": "node scripts/set-webhook.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
